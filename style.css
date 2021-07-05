@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Encode+Sans+Semi+Expanded:wght@100;200;300;400&family=Mulish:ital,wght@0,200;0,300;0,500;1,200;1,300;1,400&family=Oswald:wght@500;600&family=Pacifico&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Encode+Sans+Semi+Expanded:wght@100;200;300;400&family=Mulish:ital,wght@0,200;0,300;0,500;1,200;1,300;1,400&family=Oswald:wght@500;600&family=Pacifico&family=Press+Start+2P&display=swap&family=Bona+Nova:ital@1&display=swap&family=Zen+Loop:ital@1&display=swap&family=Zen+Loop&display=swap&family=Montserrat:wght@100&display=swap&family=Ubuntu&display=swap');
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
@@ -28,7 +28,7 @@ header{
     height: 100%;
     object-fit:cover;
     opacity: 0.9;
-    animation: zoom 15s;
+    animation: zoom 30s;
 }
 @keyframes zoom{
     0%{
@@ -48,24 +48,34 @@ header{
 
 .banner h1{
     color: #fff;
-    font-size: 3.5rem;
-    font-family: "Bad+Script", serif;
+    font-size: 4rem;
+    font-family: "Ubuntu", serif;
     font-weight: 200;
-    text-shadow: .2rem .2rem 3px rgba(0, 0, 0, .9);
+    text-shadow: .2rem .1rem 1px #302b63;
     line-height: 3.5rem;
     margin-bottom: 2rem;
-    opacity: 1;
-    animation: moveBanner 1s 0.5s;
+    opacity: 0;
+    animation: moveBanner 4s 0.9s forwards;
 }
 
 .banner p{
     color: #fff;
-    font-size:2rem;
-    font-family:  "Mulish", serif;
-    text-shadow: .2rem .1rem rgba(0, 0, 0, .9);
-    margin-bottom: 1rem;
-    opacity: 1;
-    animation: moveBanner 1s 0.7s;
+    font-size: 2.7rem;
+    font-family:  "Montserrat", serif;
+    text-shadow: .1rem .1rem 0.6px #302b63;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: moveBanner 6s 0.7s forwards;;
+}
+@keyframes moveBanner{
+    0%{
+       transform: translateY(70rem) rotateY(-45deg);
+       opacity: 0;
+    }
+    100%{
+       transform: translateY(0) rotateY(0);
+       opacity: 1;
+    }
 }
 
 .banner button{
@@ -80,8 +90,18 @@ header{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    opacity: 1;
-    animation: moveBanner 1s 0.9s;
+    animation: moveBannerButton 11s 0.7s forwards;
+    opacity: 0;
+}
+@keyframes moveBannerButton{
+    0%{
+       transform: translateY(100rem) rotateY(-170deg);
+       opacity: 0;
+    }
+    100%{
+       transform: translateY(0) rotateY(0);
+       opacity: 1;
+    }
 }
  .banner button:hover{
      opacity: 0.7;
@@ -94,15 +114,4 @@ header{
  .banner h1:hover{
     opacity: 0.7;
     color:aqua;
- }
-
- @keyframes moveBanner{
-     0%{
-        transform: translateY(10rem) rotateY(.35deg);
-        opacity: 0;
-     }
-     100%{
-        transform: translateY(0) rotateY(0);
-        opacity: 1;
-     }
  }
