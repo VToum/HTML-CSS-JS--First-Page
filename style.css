@@ -72,7 +72,7 @@ header{
     height: 100%;
     object-fit:cover;
     opacity: 0.9;
-    animation: zoom 30s;
+    animation: zoom 20s;
 }
 
 .banner{
@@ -85,14 +85,14 @@ header{
 
 .banner h1{
     color: #fff;
-    font-size: 4rem;
+    font-size: 5rem;
     font-family: var(--font-primary);
     font-weight: 200;
     text-shadow: .2rem .1rem 1px #302b63;
-    line-height: 3.5rem;
+    line-height: 4.5rem;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: moveBanner 4s 0.9s forwards;
+    animation: moveBanner 2s 0.9s forwards;
 }
 
 .banner p{
@@ -102,7 +102,7 @@ header{
     text-shadow: .1rem .1rem 0.6px #302b63;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: moveBanner 6s 0.7s forwards;
+    animation: moveBanner 5s 0.7s forwards;
 }
 
 .banner button{
@@ -117,18 +117,18 @@ header{
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    animation: moveBannerButton 11s 0.7s forwards;
+    animation: moveBannerButton 7s 0.7s forwards;
     opacity: 0;
 }
 
 .banner h1:hover{
    color:aqua;
-   transition: color 3s;
+   transition: color 2s;
 }
 
 .banner p:hover{
     color:aqua;
-    transition: color 2s;
+    transition: color 1s;
 }
 
 .banner button:hover{
@@ -136,23 +136,56 @@ color:aqua;
 transition: color 1s;
 }
 .menu-link:hover{
-    color:rgb(111, 0, 255);
+    color: aqua;
 }
-
 .social-media i:hover{
-    color: rgb(0, 0, 0);
+    color:aqua;
     transition: color 1s;
+  
 }
 
 .sidebar{
     width: 20rem;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     position: fixed;
     top: 0;
     right: -20rem;
-    transition: 1s;
+    transition: 02s;
 }
+.show-menu .hamburguer{
+    right: 16rem;
+}
+
+.hamburguer span{
+    position: absolute;
+    left: 4rem;
+    height: 2rem;
+    width: 4rem;
+    display: flex;
+    background-color: #302b63;
+    justify-content: center;
+    opacity: 0;
+    align-items: center;
+    color: #fff;
+    font-family: var(--font-primary);
+}
+.hamburguer span::before{
+    content:"";
+    position:absolute;
+    border-right: .5rem solid #302b63;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+ 
+}
+
+.show-menu .hamburguer:hover span{
+    opacity: 1;
+
+}
+
 .show-menu .sidebar{
     right: 0;
 }
@@ -160,7 +193,7 @@ transition: color 1s;
 .menu-link{
    font-family: var(--font-action);
    font-size: 2rem;
-   color: #280b4d;
+   color: #302b63;
    transition: color 1s;
 }
 .menu-item{
@@ -179,7 +212,7 @@ transition: color 1s;
     position: absolute;
     bottom: 4rem;
     width: 100%;
-    background-color: rgb(102, 58, 153);
+    background-color: #302b63;
     display: flex;
     justify-content: space-evenly;
 }
@@ -193,9 +226,6 @@ transition: color 1s;
     align-items: center;
     border-radius: 50%;
 }
-.show-menu .hamburguer{
-    right: 16rem;
-}
 
  @keyframes zoom{
     0%{
@@ -208,7 +238,7 @@ transition: color 1s;
 
  @keyframes moveBanner{
     0%{
-       transform: translateY(70rem) rotateY(-45deg);
+       transform: translateY(30rem) rotateY(-45deg);
        opacity: 0;
     }
     100%{
