@@ -32,13 +32,13 @@
 }
 .line{
     width: 100%;
-    height: .05rem;
-    background-color: #302b63;
-    box-shadow: .3rem .1rem 3px  aqua;
-    transition: 1s;
+    height: .25rem;
+    background-color: #ffe606;
+    box-shadow: .1rem .1rem 8px  rgb(247, 135, 6);
+    transition: 0.1s;
 }
 .show-menu #line1{
-    transform: rotate(45deg) translate( .1rem, .0,3rem);
+    transform: rotate(50deg) translate( .9rem, .5rem);
 }
 
 .show-menu #line2{
@@ -46,7 +46,7 @@
     visibility: hidden;
 }
 .show-menu #line3{
-    transform: rotate(-45deg) translate( .3rem, 0.1rem);
+    transform: rotate(-50deg) translate( .2rem, 0.1rem);
 
 }
 
@@ -74,7 +74,7 @@ header{
     height: 100%;
     object-fit:cover;
     opacity: 0.9;
-    animation: zoom 15s infinite alternate;
+    animation: zoom 20s infinite alternate;
     
 }
 
@@ -95,7 +95,7 @@ header{
     line-height: 4.5rem;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: moveBanner 1s 0.6s forwards;
+    animation: moveBanner 3s 0.2s forwards;
 }
 
 .banner p{
@@ -105,7 +105,7 @@ header{
     text-shadow: .1rem .1rem 0.6px #302b63;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: moveBanner 2s 0.8s forwards;
+    animation: moveBanner 3s 0.6s forwards;
 }
 
 .banner button{
@@ -125,35 +125,35 @@ header{
 }
 
 .banner h1:hover{
-   color:aqua;
+   color:#ffe606;
    transition: color 1s;
 }
 
 .banner p:hover{
-    color:aqua;
+    color:#ffe606;
     transition: color 1s;
 }
 
 .banner button:hover{
-color: aqua;
+color: #ffe606;
 transition: color 1s;
 }
 
 .menu-link:hover{
-    color: aqua;
+    color: #ffe606;
     transition: color 1s;
 }
 .social-media i:hover{
-    color:aqua;
+    color:#ffe606;
     transition: color 1s;
   
 }
 .sessao-header h1:hover{
-    color:rgb(156, 77, 180);
+    color:rgb(255, 0, 191);
     transition: color 2s;
 }
 .conhecimentos-header:hover{
-    color:rgb(156, 77, 180);
+    color:#ffe606;
     transition: color 1s;
 }
 
@@ -197,7 +197,7 @@ transition: color 1s;
 
 .show-menu .hamburguer:hover span{
     opacity: 1;
-    color: aqua;
+    color: #ffe606;
 
 }
 
@@ -254,24 +254,36 @@ transition: color 1s;
 
  @keyframes moveBanner{
     0%{
-       transform: translateY(30rem) rotateY(-45deg);
+       transform: translateY(15rem) rotateY(-100deg);
        opacity: 0;
     }
+     40%{
+        transform: translateY(19rem) rotateY(-60deg);
+        opacity: 1;
+     }
+     80%{
+        transform: translateY(10rem) rotateY(0deg);
+        opacity: 1;
+     }
     100%{
-       transform: translateY(0) rotateY(0);
+       transform: translateY(0) rotateY(1);
        opacity: 1;
     }
 }
 
  @keyframes moveBannerButton{
     0%{
-       transform: translateY(100rem) rotateY(-170deg);
+       transform: translateY(25rem) rotateY(-100deg);
        opacity: 0;
     }
+    50%{
+        transform: translateY(20rem) rotateY(-30deg);
+        opacity: 1;
+     }
     100%{
-       transform: translateY(0) rotateY(0);
-       opacity: 1;
-    }
+        transform: translateY(0) rotateY(1);
+        opacity: 1;
+     }
     
 }
 @keyframes animation1{
@@ -283,20 +295,22 @@ transition: color 1s;
 }
 
 .conhecimentos{
-    display: relative;
-    grid-template-rows: repeat 70px 40px;
-    row-gap: 20px;
+    display: grid;
+    grid-template-columns:auto;
+    grid-template: max-content;
+    padding: 40px;
+    row-gap: 5px;
     justify-content:center;
     text-align: center;
-
+    margin-bottom: .1rem;
 }
 .conhecimentos-header{
     display: grid;
-    margin-bottom: .6rem;
-    border-radius: .2rem;
-    border: groove .2rem rgb(0, 0, 0);
+    margin-bottom: .2rem;
+    border-radius: .4rem;
+    border: groove .3rem rgb(0, 0, 0);
     background: linear-gradient(to right, #292647, rgb(180, 22, 228), #1f0531); 
-    animation: animation1 2s infinite alternate;
+    animation: animation1 3s infinite alternate;
     background-size: 400%;
     background-position: left;
     
@@ -304,14 +318,12 @@ transition: color 1s;
 
 .conhecimentos-text{
     font-family: var(--font-action);
-    font-size: 20px;
-    color: rgb(5, 5, 5);
+    font-size: 18px;
+    color: rgb(0, 0, 0);
     justify-content: center;
-    margin-bottom: 2rem
-
 }
 .sessao-header{
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content:center;
 }
@@ -320,11 +332,11 @@ transition: color 1s;
     font-size: 4rem;
     color: #77149e;
     text-shadow: 0.1rem 0.1rem 0.1rem #000000;
-    margin-bottom: 3rem;
+    margin-bottom: .1rem;
     border-bottom: 4px solid;
     border-image: linear-gradient(
         135deg,
-        #00fff2 0%,
+        #ffe600 0%,
 
         #d209ec 100%
       
@@ -332,7 +344,7 @@ transition: color 1s;
     
 }
 .conhecimentos-header{
-    display:center;
+    display: flex;
     align-items: center;
     justify-content:center;
 
