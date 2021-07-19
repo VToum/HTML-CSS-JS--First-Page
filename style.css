@@ -95,7 +95,7 @@ header{
     line-height: 4.5rem;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: moveBanner 2s 0.9s forwards;
+    animation: moveBanner 1s 0.6s forwards;
 }
 
 .banner p{
@@ -105,12 +105,12 @@ header{
     text-shadow: .1rem .1rem 0.6px #302b63;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: moveBanner 5s 0.7s forwards;
+    animation: moveBanner 2s 0.8s forwards;
 }
 
 .banner button{
     font-family: var(--font-action);
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: .1rem;
     background: #36325e;
@@ -120,7 +120,7 @@ header{
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    animation: moveBannerButton 7s 0.7s forwards;
+    animation: moveBannerButton 5s 0.7s forwards;
     opacity: 0;
 }
 
@@ -135,7 +135,7 @@ header{
 }
 
 .banner button:hover{
-color:aqua;
+color: aqua;
 transition: color 1s;
 }
 
@@ -145,18 +145,22 @@ transition: color 1s;
 }
 .social-media i:hover{
     color:aqua;
-    transition: color 3s;
+    transition: color 1s;
   
 }
-.conhecimentos-header{
-    background-image: linear-gradient(45deg, rgb(128, 0, 255), rgb(0, 255, 234), rgb(0, 0, 0), rgb(255, 0, 0));
-    
+.sessao-header h1:hover{
+    color:rgb(156, 77, 180);
+    transition: color 2s;
+}
+.conhecimentos-header:hover{
+    color:rgb(156, 77, 180);
+    transition: color 1s;
 }
 
 .sidebar{
     width: 20rem;
     height: 100vh;
-    background-color: #fff;
+    background-color: rgb(156, 77, 180);
     position: fixed;
     top: 0;
     right: -20rem;
@@ -176,7 +180,7 @@ transition: color 1s;
     justify-content: center;
     opacity: 0;
     align-items: center;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-family: var(--font-primary);
     transition: 1s;
 }
@@ -204,7 +208,8 @@ transition: color 1s;
 .menu-link{
    font-family: var(--font-action);
    font-size: 2rem;
-   color: #302b63;
+   color: #ffffff;
+   text-shadow: 0.1rem 0.1rem 0.2rem #000000;
    transition: color 1s;
 }
 .menu-item{
@@ -278,7 +283,7 @@ transition: color 1s;
 }
 
 .conhecimentos{
-    display: grid;
+    display: relative;
     grid-template-rows: repeat 70px 40px;
     row-gap: 20px;
     justify-content:center;
@@ -286,11 +291,12 @@ transition: color 1s;
 
 }
 .conhecimentos-header{
-    margin-bottom: .1rem;
-    border-radius: 1rem;
-    border: solid .1rem rgb(8, 8, 8);
-    background: linear-gradient(to right, #292647, rgb(0, 255, 242), #1f0531); 
-    animation: animation1 15s infinite alternate;
+    display: grid;
+    margin-bottom: .6rem;
+    border-radius: .2rem;
+    border: groove .2rem rgb(0, 0, 0);
+    background: linear-gradient(to right, #292647, rgb(180, 22, 228), #1f0531); 
+    animation: animation1 2s infinite alternate;
     background-size: 400%;
     background-position: left;
     
@@ -298,11 +304,10 @@ transition: color 1s;
 
 .conhecimentos-text{
     font-family: var(--font-action);
-    font-size: 17px;
-    color: black;
+    font-size: 20px;
+    color: rgb(5, 5, 5);
     justify-content: center;
-    align-self: center;
-    margin-bottom: 3rem
+    margin-bottom: 2rem
 
 }
 .sessao-header{
@@ -312,21 +317,41 @@ transition: color 1s;
 }
 .sessao-header h1{
     font-family: var(--font-primary);
-    font-size: 5rem;
-    color:#000000;
-    border-bottom: solid .2rem rgb(0, 0, 0);
+    font-size: 4rem;
+    color: #77149e;
+    text-shadow: 0.1rem 0.1rem 0.1rem #000000;
     margin-bottom: 3rem;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(
+        135deg,
+        #00fff2 0%,
+
+        #d209ec 100%
+      
+    ) 1;
     
 }
 .conhecimentos-header{
-    display: absolute;
+    display:center;
     align-items: center;
     justify-content:center;
 
 }
 .conhecimentos-header{
+    display:center;
+    align-items: center;
+    justify-content:center;
     font-family: var(--font-primary);
-    font-size: 24px;
-    color:#000000;
-    border-bottom: solid .2rem black;
+    font-size: 18px;
+    color:#fff;
+    text-shadow: 0.1rem 0.1rem 0.1rem #000000;
+    border: 2px groove;
+    border-image: linear-gradient(
+        135deg,
+        #fd01fd 0%,
+
+        #00d9ff 100%
+      
+    ) 1;
+    
 }
