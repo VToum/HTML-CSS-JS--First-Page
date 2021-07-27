@@ -14,8 +14,23 @@
     --font-secondary: "Montserrat", serif;
     --font-action: "Mulish", serif;
 }
+.tooltip{
+    font-family: var(--font-secondary);
+    background-color: #302b63;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 2rem 0;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 2px solid;
+     border-image: linear-gradient(
+        135deg,
+        #ffe600 0%,
 
-
+        #d209ec 100%
+      
+    ) 1;
+}
 
 .hamburguer{
     background-color:rgba(253, 253, 253, 0);
@@ -23,8 +38,8 @@
     height: 2rem;
     position: fixed;
     z-index: 100;
-    right: 2rem;
-    top: 2rem;
+    right: 1rem;
+    top: 3.4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -35,10 +50,10 @@
     height: .25rem;
     background-color: #ffe606;
     box-shadow: .1rem .1rem 8px  rgb(247, 135, 6);
-    transition: 0.1s;
+    transition: 120ms;
 }
 .show-menu #line1{
-    transform: rotate(50deg) translate( .9rem, .5rem);
+    transform: rotate(49deg) translate(.9rem, .5rem);
 }
 
 .show-menu #line2{
@@ -46,7 +61,7 @@
     visibility: hidden;
 }
 .show-menu #line3{
-    transform: rotate(-50deg) translate( .2rem, 0.1rem);
+    transform: rotate(-51deg) translate( .2rem, .02rem);
 
 }
 
@@ -74,7 +89,7 @@ header{
     height: 100%;
     object-fit:cover;
     opacity: 0.9;
-    animation: zoom 20s infinite alternate;
+    animation: zoom 25s infinite alternate;
     
 }
 
@@ -96,6 +111,16 @@ header{
     margin-bottom: 2rem;
     opacity: 0;
     animation: moveBanner 3s 0.2s forwards;
+}
+.banner h2{
+    padding: 100px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: var(--font-primary);
+    font-weight: 200;
+    text-shadow: .1rem .1rem 1px #302b63;
+    line-height: 2rem;
+    margin-bottom: 1rem;
 }
 
 .banner p{
@@ -124,6 +149,10 @@ header{
     opacity: 0;
 }
 
+.tooltip :hover{
+    color:#ffe606;
+    transition: color 1s;
+}
 .banner h1:hover{
    color:#ffe606;
    transition: color 1s;
@@ -164,10 +193,10 @@ transition: color 1s;
     position: fixed;
     top: 0;
     right: -20rem;
-    transition: 1s;
+    transition: 800ms;
 }
 .show-menu .hamburguer{
-    right: 16rem;
+    right: 2rem;
 }
 
 .hamburguer span{
@@ -184,17 +213,6 @@ transition: color 1s;
     font-family: var(--font-primary);
     transition: 1s;
 }
-.hamburguer span::before{
-    content:"";
-    position:absolute;
-    border-right: .5rem solid #302b63;
-    border-top: .5rem solid transparent;
-    border-left: .5rem solid transparent;
-    border-bottom: .5rem solid transparent;
-    left: -1rem;
- 
-}
-
 .show-menu .hamburguer:hover span{
     opacity: 1;
     color: #ffe606;
