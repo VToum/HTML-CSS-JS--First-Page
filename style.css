@@ -16,9 +16,9 @@
 }
 .tooltip{
     font-family: var(--font-secondary), sans-serif;
-    background-color: #302b63;
+    background-color: #130d22;
     color: rgb(255, 255, 255);
-    font-weight: 600;
+    font-weight: 800;
     padding: 2rem 0;
     text-align: center;
     cursor: pointer;
@@ -72,7 +72,7 @@ body{
 
 header{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
     position: relative;
 }
@@ -106,7 +106,7 @@ header{
     font-size: 3rem;
     font-family: var(--font-primary), sans-serif;
     font-weight: 200;
-    text-shadow: .2rem .1rem 1px #302b63;
+    text-shadow: .2rem .1rem 1px #100e18;
     line-height: 4.5rem;
     margin-bottom: 2rem;
     opacity: 0;
@@ -118,7 +118,7 @@ header{
     font-size: 1.2rem;
     font-family: var(--font-primary);
     font-weight: 200;
-    text-shadow: .1rem .1rem 1px #302b63;
+    text-shadow: .1rem .1rem 1px #100e18;
     line-height: 2rem;
     margin-bottom: 1rem;
 }
@@ -127,7 +127,7 @@ header{
     color: #fff;
     font-size: 2rem;
     font-family: var(--font-secondary), sans-serif;
-    text-shadow: .1rem .1rem 0.6px #302b63;
+    text-shadow: .1rem .1rem 0.6px #100e18;
     margin-bottom: 2rem;
     opacity: 0;
     animation: moveBanner 3s 0.6s forwards;
@@ -137,11 +137,9 @@ header{
     font-family: var(--font-action);
     color: rgb(255, 255, 255);
     text-transform: uppercase;
-    letter-spacing: .1rem;
-    background: #36325e;
-    background: -webkit-linear-gradient(to right, #24243e, #302b63,#0f0c29); 
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    padding: 0.9rem 2.5rem;
+    letter-spacing: .2rem;
+    background: #130d22;
+    padding: 0.9rem 1.35rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -178,7 +176,7 @@ transition: color 1s;
   
 }
 .sessao-header h1:hover{
-    color:rgb(255, 0, 191);
+    color:rgb(223, 200, 0);
     transition: color 2s;
 }
 .conhecimentos-header:hover{
@@ -193,11 +191,11 @@ transition: color 1s;
 .sidebar{
     width: 20rem;
     height: 100vh;
-    background-color: #302b63;;
+    background-color: #130d22;
     position: fixed;
     top: 0;
     right: -20rem;
-    transition: 800ms;
+    transition: 700ms;
 }
 .show-menu .hamburguer{
     right: 2rem;
@@ -209,7 +207,7 @@ transition: color 1s;
     height: 2rem;
     width: 4rem;
     display: flex;
-    background-color: #302b63;
+    background-color: #130d22;
     justify-content: center;
     opacity: 0;
     align-items: center;
@@ -231,7 +229,7 @@ transition: color 1s;
    font-family: var(--font-action);
    font-size: 2rem;
    color: #ffffff;
-   text-shadow: 0.1rem 0.1rem 0.2rem #000000;
+   text-shadow: 0.1rem 0.1rem 0.2rem #130d22;
    transition: color 1s;
 }
 .menu-item{
@@ -250,7 +248,7 @@ transition: color 1s;
     position: absolute;
     bottom: 4rem;
     width: 100%;
-    background-color: #302b63;
+    background-color: #130d22;
     display: flex;
     justify-content: space-evenly;
 }
@@ -276,11 +274,11 @@ box-sizing: border-box;
 font-family: var(--font-action), sans-serif;
 color:#ffffff;
 
-background: rgb(156, 77, 180);
+background: #11001a;
 }
 main.cards section.card .icon{
     width: 260px;
-    height: 160px
+    height: 140px
 }
 main.cards section.card{
     display: flex;
@@ -288,7 +286,7 @@ main.cards section.card{
     align-items: center;
     text-align: center;
     border-radius: .3rem;
-    background:#302b63;
+    background:#110c1f;
     padding: 1rem 1.2rem;
     margin-left: 3px;
     margin-right: 5px;
@@ -301,13 +299,29 @@ main.cards section.card button{
     padding: 0.5rem 1rem;
     text-transform: uppercase;
     font-family: var(--font-action), sans-serif;
-    border-radius: 32px;
+    border-radius: 12px;
     border: 0;
     font-size: 80%;
-    font-weight: 500;
-    background:linear-gradient(to right, #000000, #3c22d1, rgb(0, 0, 0));
+    font-weight: 700;
+    background:linear-gradient(to right, #000000, #4b3486, rgb(0, 0, 0));
     color: rgb(255, 255, 255);
 
+}
+
+@media screen and (max-width: 720px) {
+    main.cards{
+        flex-direction: column;
+    }
+    main.cards section.cards{
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+    main.cards section.card :last-child{
+        margin-bottom: 0;
+    }
+    main.cards section.card button{
+        font-size: 70%;
+    }
 }
  @keyframes zoom{
     0%{
@@ -361,30 +375,26 @@ main.cards section.card button{
 }
 
 .conhecimentos{
-    display: absolute;
-    grid-template-columns:auto;
-    grid-template: max-content;
-    padding: 40px;
-    row-gap: 5px;
+    padding: 20px;
     justify-content:center;
     text-align: center;
-    margin-bottom: .1rem;
+    margin-bottom: 0rem;
+    padding: 30px;
 }
 .conhecimentos-header{
-    display: grid;
     margin-bottom: .2rem;
-    border-radius: .4rem;
-    border: groove .3rem rgb(0, 0, 0);
-    background: linear-gradient(to right, #292647, rgb(180, 22, 228), #1f0531); 
-    animation: animation1 3s infinite alternate;
-    background-size: 400%;
+    border-radius: .1rem;
+    border: groove .1rem rgb(0, 0, 0);
+    background: linear-gradient(to right, #0d0d0e, rgb(77, 18, 95), #050008); 
+    animation: animation1 1s infinite alternate;
+    background-size: 200%;
     background-position: left;
     
 }
 
 .conhecimentos-text{
     font-family: var(--font-action);
-    font-size: 18px;
+    font-size: 19px;
     color: rgb(0, 0, 0);
     justify-content: center;
 }
@@ -396,8 +406,8 @@ main.cards section.card button{
 .sessao-header h1{
     font-family: var(--font-primary);
     font-size: 4rem;
-    color: #77149e;
-    text-shadow: 0.1rem 0.1rem 0.1rem #000000;
+    color: #430c58;
+    text-shadow: 0.1rem 0.1rem 0.1rem #270033;
     margin-bottom: .1rem;
     border-bottom: 4px solid;
     border-image: linear-gradient(
@@ -417,20 +427,12 @@ main.cards section.card button{
 
 }
 .conhecimentos-header{
-    display:center;
-    align-items: center;
+    display: center;
     justify-content:center;
+    align-items: center;
     font-family: var(--font-primary);
-    font-size: 18px;
-    color:#fff;
-    text-shadow: 0.1rem 0.1rem 0.1rem #000000;
-    border: 2px groove;
-    border-image: linear-gradient(
-        135deg,
-        #fd01fd 0%,
-
-        #00d9ff 100%
-      
-    ) 1;
-    
+    font-size: 22px;
+    color:rgb(255, 255, 255);
+    text-shadow: 0.10rem 0.10rem 0.10rem #42044e;
+    border-radius: 10px
 }
