@@ -21,7 +21,6 @@
     font-weight: 800;
     padding: 2rem 0;
     text-align: center;
-    cursor: pointer;
     border-bottom: 2px solid;
     border-image: linear-gradient(
 
@@ -67,7 +66,6 @@
 
 }
 
-
 body{
     font-size: 16px;
 }
@@ -92,8 +90,7 @@ header{
     object-fit:cover;
     filter: blur(2px);
     opacity: 0.5;
-    animation: zoom 25s infinite alternate;
-    
+    animation: zoom 20s infinite alternate;   
 }
 
 .banner{
@@ -106,14 +103,14 @@ header{
 
 .banner h1{
     color: #fff;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: var(--font-primary), sans-serif;
     font-weight: 200;
     text-shadow: .2rem .1rem 1px #100e18;
     line-height: 4.5rem;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: moveBanner 3s 0.2s forwards;
+    animation: moveBanner 2s 0.6s forwards;
 }
 .banner h2{
     padding: 100px;
@@ -133,10 +130,10 @@ header{
     text-shadow: .1rem .1rem 0.6px #100e18;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: moveBanner 3s 0.6s forwards;
+    animation: moveBanner 2s 0.6s forwards;
 }
 
-.banner button{
+.banner a{
     font-family: var(--font-action);
     color: rgb(255, 255, 255);
     text-transform: uppercase;
@@ -146,7 +143,7 @@ header{
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    animation: moveBannerButton 5s 0.7s forwards;
+    animation: moveBannerButton 2s 0.2s forwards;
     opacity: 0;
 }
 
@@ -164,8 +161,8 @@ header{
     transition: color 1s;
 }
 
-.banner button:hover{
-color: #ffe606;
+.banner a:hover{
+color: #ffa806;
 transition: color 1s;
 }
 
@@ -174,7 +171,7 @@ transition: color 1s;
     transition: color 1s;
 }
 .social-media i:hover{
-    color:#141212;
+    color:#fdb009;
     transition: color 1s;
   
 }
@@ -196,6 +193,7 @@ transition: color 1s;
     right: -20rem;
     transition: 700ms;
 }
+
 .show-menu .hamburguer{
     right: 2rem;
 }
@@ -289,7 +287,7 @@ main.cards section.card{
     background:#02030f;
     padding: 1rem 1.2rem;
     margin-left: 3px;
-    margin-right: 5px;
+    margin-right: 2px;
     box-shadow:  -3rem 0 3rem rgb(28, 20, 63);
 }
 main.cards section.card img{
@@ -321,7 +319,7 @@ main.cards section.card button{
 }
 .cards::-webkit-scrollbar{
     width: 10px;
-    height: 10px;
+    height: 8px;
 }
 .cards::-webkit-scrollbar-thumb{
     background:#292101;
@@ -392,7 +390,7 @@ footer{
     transition: color .4s ease;
 }
 .sociais a:hover i {
-    color: rgb(255, 58, 58);
+    color: rgb(255, 162, 41);
 }
 .footer-bottom{
     background:#000000;
@@ -439,17 +437,14 @@ footer{
 
  @keyframes moveBanner{
     0%{
-       transform: translateY(15rem) rotateY(-100deg);
+       transform: translateY(15rem) rotateY(70deg);
        opacity: 0;
     }
-     40%{
-        transform: translateY(19rem) rotateY(-60deg);
+     50%{
+        transform: translateY(0rem) rotateY(50deg);
         opacity: 1;
      }
-     80%{
-        transform: translateY(10rem) rotateY(0deg);
-        opacity: 1;
-     }
+  
     100%{
        transform: translateY(0) rotateY(1);
        opacity: 1;
@@ -461,10 +456,6 @@ footer{
        transform: translateY(25rem) rotateY(-100deg);
        opacity: 0;
     }
-    50%{
-        transform: translateY(20rem) rotateY(-30deg);
-        opacity: 1;
-     }
     100%{
         transform: translateY(0) rotateY(1);
         opacity: 1;
