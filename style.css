@@ -68,6 +68,7 @@
 
 body{
     font-size: 16px;
+    background :#d8d8d8
 }
 
 header{
@@ -502,15 +503,15 @@ footer{
 .sessao-header h1{
     font-family: var(--font-primary);
     font-size: 4rem;
-    color: #090520;
-    text-shadow: 0.11rem 0.14rem 0.23rem #090520;
+    color: #000000;
+    text-shadow: 0.11rem 0.14rem 0.23rem #7a7a7a;
     margin-bottom: .1rem;
     border-bottom: 4px solid;
     border-image: linear-gradient(
         135deg,
-        #fffb00 0%,
+        #000000 0%,
 
-        #0c0238 100%
+        #969696 100%
       
     ) 1;
     
