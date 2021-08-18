@@ -14,24 +14,7 @@
     --font-secondary: "Montserrat", serif;
     --font-action: "Mulish", serif;
 }
-.tooltip{
-    font-family: var(--font-secondary), sans-serif;
-    background-color: #0b0714;
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    padding: 2rem 1rem;
-    text-align: center;
-    border-bottom: 1px solid;
-    border-image: linear-gradient(
 
-        135deg,
-        #eeff00 0%,
-
-        #9c0303 100%
-      
-      
-    ) 1;
-}
 
 .hamburguer{
     background-color:rgba(253, 253, 253, 0);
@@ -72,15 +55,15 @@ body{
 }
 
 header{
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 80vh;
     overflow: hidden;
     position: relative;
 }
 
 .img-wrapper{
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 80vw;
     overflow: hidden;
     position: relative;
     background-color: #141410;
@@ -89,20 +72,20 @@ header{
 
 .img-wrapper img{
     width: 100%;
-    height: 100vh;
+    height: 90vw;
     position: relative;
     object-fit:cover;
     filter: blur(2px);
     opacity: 0.2;
     animation: zoom 15s infinite alternate;   
-    clea
+
 }
 
 .banner{
     position: absolute;
     left: 5%;
     right: 5%;
-    top: 25%;
+    top: 15%;
     bottom: 15%;
 }
 
