@@ -365,10 +365,12 @@ footer{
 }
 
 .conhecimentos{
+    display: inline-block;
     justify-content: center;
     text-align: center;
     margin-bottom: 1.5rem;
     padding: 40px;
+
 }
 .conhecimentos-header{
     display: inline-block;
