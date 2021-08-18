@@ -84,6 +84,7 @@ header{
     overflow: hidden;
     position: relative;
     background-color: #141410;
+    
 }
 
 .img-wrapper img{
@@ -94,6 +95,7 @@ header{
     filter: blur(2px);
     opacity: 0.2;
     animation: zoom 15s infinite alternate;   
+    clea
 }
 
 .banner{
@@ -383,7 +385,7 @@ footer{
     justify-content: center;
     text-align: center;
     margin-bottom: 1.5rem;
-    padding: 20px;
+    padding: 40px;
 }
 .conhecimentos-header{
     display: inline-block;
@@ -411,7 +413,7 @@ footer{
     justify-content: center;
 }
 .sessao-header{
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content:center;
     
@@ -422,7 +424,7 @@ footer{
     color: #dddddd;
     text-shadow: 0.11rem 0.14rem 0.23rem #000000;
     margin-bottom: .1rem;
-    border-bottom: 4px solid;
+    border-bottom: 1px solid;
     border-image: linear-gradient(
         135deg,
         #ebfc01 0%,
