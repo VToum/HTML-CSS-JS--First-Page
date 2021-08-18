@@ -2,7 +2,7 @@
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -18,10 +18,10 @@
     font-family: var(--font-secondary), sans-serif;
     background-color: #0b0714;
     color: rgb(255, 255, 255);
-    font-weight: 800;
-    padding: 2rem 0;
+    font-weight: 700;
+    padding: 2rem 1rem;
     text-align: center;
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
     border-image: linear-gradient(
 
         135deg,
@@ -38,7 +38,7 @@
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 1;
     right: 1rem;
     top: 3.4rem;
     display: flex;
@@ -54,7 +54,7 @@
     transition: 120ms;
 }
 .show-menu #line1{
-    transform: rotate(49deg) translate(.9rem, .5rem);
+    transform: rotate(50deg) translate(.9rem, .5rem);
 }
 
 .show-menu #line2{
@@ -62,7 +62,7 @@
     visibility: hidden;
 }
 .show-menu #line3{
-    transform: rotate(-51deg) translate( .2rem, .02rem);
+    transform: rotate(-50deg) translate( .2rem, .02rem);
 
 }
 
@@ -83,12 +83,12 @@ header{
     height: 100vh;
     overflow: hidden;
     position: relative;
-    background-color: #050500;
+    background-color: #141410;
 }
 
 .img-wrapper img{
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     position: relative;
     object-fit:cover;
     filter: blur(2px);
@@ -98,17 +98,17 @@ header{
 
 .banner{
     position: absolute;
-    left: 10%;
-    right: 20%;
-    top: 10%;
-    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    top: 25%;
+    bottom: 15%;
 }
 
 .banner h1{
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-family: var(--font-primary), sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     text-shadow: .2rem .1rem 1px #100e18;
     line-height: 4.5rem;
     margin-bottom: 2rem;
@@ -120,7 +120,7 @@ header{
     color: #fff;
     font-size: 1.5rem;
     font-family: var(--font-primary);
-    font-weight: 200;
+    font-weight: 400;
     text-shadow: .1rem .1rem 1px #100e18;
     line-height: 2rem;
     margin-bottom: 1rem;
@@ -165,7 +165,7 @@ header{
 }
 
 .banner a:hover{
-color: #ffa806;
+color: #ffe606;
 transition: color 1s;
 }
 
@@ -188,12 +188,12 @@ transition: color 1s;
     transition: color 1s;
 }
 .sidebar{
-    width: 19rem;
+    width: 20rem;
     height: 100vh;
     background-color: #0b0714;
     position: fixed;
     top: 0;
-    right: -19rem;
+    right: -20rem;
     transition: 700ms;
 }
 
@@ -264,85 +264,6 @@ transition: color 1s;
     border-radius: 50%;
 }
 
-main.cards{
-display: flex;
-margin: 0;
-width: 100%;
-padding: 3rem;
-justify-content:center;
-align-items: center;
-box-sizing: border-box;
-font-family: var(--font-action), sans-serif;
-color:#ffffff;
-
-background: #050308;
-overflow:scroll;
-cursor: pointer;
-
-}
-main.cards section.card .icon{
-    width: 200px;
-    height: 160px
-}
-main.cards section.card{
-    align-items: center;
-    text-align: center;
-    border-radius: .4rem;
-    background:#02030f;
-    padding: 1rem 1.2rem;
-    margin-left: 3px;
-    margin-right: 2px;
-    box-shadow:  -3rem 0 3rem rgb(28, 20, 63);
-}
-main.cards section.card img{
-    width: 100%;
-}
-main.cards section.card button{
-    padding: 0.5rem 1rem;
-    text-transform: uppercase;
-    font-family: var(--font-action), sans-serif;
-    border-radius: 10px;
-    border: 0;
-    font-size: 90%;
-    font-weight: 700;
-    background:linear-gradient(to right, #53005e, #010a00, #53005e);
-    color: rgb(255, 251, 0);
-
-}
-.p-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    margin-bottom: 0;
-    border-radius: 16px;
-    height: 350px;
-    width: 100px;
-    min-width: 200px;
-    padding: 1.5rem;
-    
-}
-.cards::-webkit-scrollbar{
-    width: 10px;
-    height: 8px;
-}
-.cards::-webkit-scrollbar-thumb{
-    background:#292101;
-    border-radius: 12px;
-    box-shadow: inset 3px 3px 3px rgba(208, 211, 8, 0.993);
-}
-
-.card:hover{
-    transform: translateY(-2rem);
-    transition: .7s;
-}
-.card:hover~.card{
-    transform: translateX(60px);
-    transition: .9s;
-}
-.card:not(:first-child){
-    margin-left: -120px;
-    transition: .7s;
-}
 footer{
     position:bottom;
     bottom: 0;
@@ -414,22 +335,6 @@ footer{
 
 }
 
-
-@media screen and (max-width:20px) {
-    main.cards{
-        flex-direction: column;
-    }
-    main.cards section.cards{
-        margin-left: 0;
-        margin-bottom: 32px;
-    }
-    main.cards section.card :last-child{
-        margin-bottom: 0;
-    }
-    main.cards section.card button{
-        font-size: 70%;
-    }
-}
  @keyframes zoom{
     0%{
         transform: scale(1.3);
@@ -475,20 +380,27 @@ footer{
 }
 
 .conhecimentos{
-    padding: 20px;
-    justify-content:center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 0rem;
-    padding: 30px;
+    margin-bottom: 1.5rem;
+    padding: 20px;
 }
 .conhecimentos-header{
-    margin-bottom: .2rem;
-    border-radius: .1rem;
+    display: inline-block;
+    width: 100%;
+    max-width: 720px;
+    margin-bottom: 1.5rem;
     border: groove .1rem rgb(0, 0, 0);
+    border-style: 10px solid;
     background: linear-gradient(to right, #0b0714, #251649, #0b0714); 
     animation: animation1 2s infinite alternate;
     background-size: 200%;
     background-position: left;
+    font-family: var(--font-primary);
+    font-size: 22px;
+    color:rgb(255, 255, 255);
+    text-shadow: 0.10rem 0.10rem 0.10rem #000000;
+    border-radius: 10px;
     
 }
 
@@ -502,6 +414,7 @@ footer{
     display: grid;
     align-items: center;
     justify-content:center;
+    
 }
 .sessao-header h1{
     font-family: var(--font-primary);
@@ -518,21 +431,4 @@ footer{
       
     ) 1;
     
-}
-.conhecimentos-header{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    border-style: 4px solid;
-
-}
-.conhecimentos-header{
-    display: center;
-    justify-content:center;
-    align-items: center;
-    font-family: var(--font-primary);
-    font-size: 22px;
-    color:rgb(255, 255, 255);
-    text-shadow: 0.10rem 0.10rem 0.10rem #000000;
-    border-radius: 10px
 }
