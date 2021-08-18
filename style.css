@@ -300,7 +300,7 @@ footer{
     transition: color .4s ease;
 }
 .sociais a:hover i {
-    color: rgb(255, 162, 41);
+    color: rgb(235, 252, 0);
 }
 .footer-bottom{
     background:#000000;
